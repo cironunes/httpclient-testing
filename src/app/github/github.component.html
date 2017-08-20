@@ -1,0 +1,7 @@
+<form [formGroup]="githubForm">
+  <input type="search" placeholder="find a user" formControlName="search" name="search">
+</form>
+
+<ul>
+  <li *ngFor="let user of users | async">{{ user.login }}</li>
+</ul>
